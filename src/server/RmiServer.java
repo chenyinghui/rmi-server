@@ -30,8 +30,7 @@ public class RmiServer extends UnicastRemoteObject implements RmiServerIntf {
         }
            
         RmiServer obj = new RmiServer();
-//        Naming.rebind("//localhost/RmiServer", obj);
-        Naming.rebind("//120.76.208.28/RmiServer", obj);
+        Naming.rebind("//localhost/RmiServer", obj);
         System.out.println("PeerServer bound in registry");
     }
 }
