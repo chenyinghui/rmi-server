@@ -33,4 +33,9 @@ public class RmiServer extends UnicastRemoteObject implements RmiServerIntf {
         Naming.rebind("//localhost/RmiServer", obj);
         System.out.println("PeerServer bound in registry");
     }
+
+	@Override
+	public int increaseAndGet(int num) {
+		return count += num;
+	}
 }
